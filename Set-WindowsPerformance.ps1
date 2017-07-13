@@ -15,8 +15,8 @@ $banner = @"
  \ \      / (_)_ __   __| | _____      _____  / |/ _ \          
   \ \ /\ / /| | '_ \ / _' |/ _ \ \ /\ / / __| | | | | |         
    \ V  V / | | | | | (_| | (_) \ V  V /\__ \ | | |_| |         
-    \_/\_/  |_|_| |_|\__,_|\___/ \_/\_/ |___/ |_|\___/          
-                                                                
+    \_/\_/  |_|_| |_|\__,_|\___/ \_/\_/ |___/ |_|\___/  Fix FPS
+
 "@
 
 
@@ -34,7 +34,7 @@ $posible_directorio_2 = $posible_directorio_2 + "\BACKGROUND*"
 
 
 Write-Host $banner -ForegroundColor Green
-Write-Host "                                                    by CyberVaca" -ForegroundColor red ; sleep -Seconds 2
+Write-Host "                                                   by CyberVaca" -ForegroundColor red ; sleep -Seconds 2
 informa "Buscando Servicio Steam Client Service ..." ; 
 if ((Get-Service -Name "Steam Client Service").status -ne "Stopped") {informa "No hemos encontrado el servicio :_("} else {informa "Servicio encontrado, se procede a parar el servicio";$n++;Get-Service -Name "Steam Client Service" | Stop-Service ;set-Service -Name "Steam Client Service" -StartupType Manual}
 
@@ -60,7 +60,7 @@ if ((Get-ItemProperty "registry::HKEY_CURRENT_USER\Control Panel\International\U
 
 informa "Creando Regkeys para desactivar GameDVR" ; New-ItemProperty registry::HKEY_CURRENT_USER\System\GameConfigStore\ -Name GameDVR_Enabled -Value 0 -Force | Out-Null
 
-if (((Get-AppxPackage -Name "*3dbuilder*").name).count -ne 0) {informa "Desinstalando 3DBuilder`n";$x++; Get-AppxPackage -Name Microsoft.ZuneMusic | Remove-AppxPackage | Out-Null}
+if (((Get-AppxPackage -Name "*3dbuilder*").name).count -ne 0) {informa "Desinstalando 3DBuilder`n";$x++; Get-AppxPackage -Name "*3dbuilder*"  | Remove-AppxPackage | Out-Null}
 if (((Get-AppxPackage -Name "*windowsmaps*" ).name).count -ne 0) {informa "Desinstalando WindowsMaps`n";$x++;Get-AppxPackage -Name "*windowsmaps*" | Remove-AppxPackage | Out-Null}
 if (((Get-AppxPackage -Name "*bingfinance*").name).count -ne 0) {informa "Desinstalando BingFinance`n";$x++;Get-AppxPackage -Name "*bingfinance*" | Remove-AppxPackage | Out-Null}
 if (((Get-AppxPackage -Name "*bingnews*").name).count -ne 0) {informa "Desinstalando BingNews`n";$x++;Get-AppxPackage -Name "*bingnews*" | Remove-AppxPackage | Out-Null}
