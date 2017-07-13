@@ -17,14 +17,15 @@
        
        
     
-[+] Buscando Servicio Steam Client Service ... 
-[+] No hemos encontrado el servicio :_( 
-[+] La Telemetria esta desactivada 
-[+] AdvertisingInfo esta desactivado 
-[+] SmartScreen Filter esta desactivado 
-[+] TIPC esta desactivado 
-[+] Servicio de Telemetria esta desactivado 
-[+] Cortana esta desactivado 
-[+] El arranque de Windows esta optimizado 
-[+] OneDrive en Explorer esta desactivado 
-[+] Su Windows ha quedado optimizado, es necesario reiniciar 
+[+] Buscando Servicio Steam Client Service ...   
+[+] No hemos encontrado el servicio :_(   
+[+] La Telemetria esta desactivada   
+[+] AdvertisingInfo esta desactivado   
+[+] SmartScreen Filter esta desactivado   
+[+] TIPC esta desactivado   
+[+] Servicio de Telemetria esta desactivado   
+[+] Cortana esta desactivado   
+[+] El arranque de Windows esta optimizado   
+[+] OneDrive en Explorer esta desactivado   
+[+] Su Windows ha quedado optimizado, es necesario reiniciar   
+  
