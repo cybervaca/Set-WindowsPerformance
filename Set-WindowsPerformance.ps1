@@ -15,7 +15,7 @@ $banner = @"
  \ \      / (_)_ __   __| | _____      _____  / |/ _ \          
   \ \ /\ / /| | '_ \ / _' |/ _ \ \ /\ / / __| | | | | |         
    \ V  V / | | | | | (_| | (_) \ V  V /\__ \ | | |_| |         
-    \_/\_/  |_|_| |_|\__,_|\___/ \_/\_/ |___/ |_|\___/  Fix FPS
+    \_/\_/  |_|_| |_|\__,_|\___/ \_/\_/ |___/ |_|\___/  
 
 "@
 
@@ -24,11 +24,6 @@ $banner = @"
 
 [int]$n = 0
 [int]$x = 0
-
-$posible_directorio_1 = (ls ${env:ProgramFiles(x86)} -Recurse  | Where-Object {$_.Directory -like "*Offensive\csgo\resource\flash"}).DirectoryName[0]
-$posible_directorio_2 = (ls ${env:ProgramFiles} -Recurse  | Where-Object {$_.Directory -like "*Offensive\csgo\resource\flash"}).DirectoryName[0]
-$posible_directorio_1 = $posible_directorio_1 + "\BACKGROUND*"
-$posible_directorio_2 = $posible_directorio_2 + "\BACKGROUND*"
 
 ##############################################################################################################################
 
@@ -73,9 +68,6 @@ if (((Get-AppxPackage -Name "*xboxapp* ").name).count -ne 0) {informa "Desisntal
 
 informa "Corregidas $n/10 claves de registro"
 informa "Apps de Windows desinstaladas $x/8"
-informa "Buscando posible archivo corrupto 'BACKGROUND' dentro del CSGO "
-if (Test-Path $posible_directorio_1 -eq $true) {informa "Detectado archivo corrupto, se procede a eliminar" ; Remove-Item $posible_directorio_1}
-if (Test-Path $posible_directorio_2 -eq $true) {informa "Detectado archivo corrupto, se procede a eliminar" ;Remove-Item $posible_directorio_2}
 informa "Su Windows ha quedado optimizado, es necesario reiniciar"
 
 sleep -Seconds 5
